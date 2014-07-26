@@ -3,7 +3,7 @@ FROM eduard44/vertex
 # Update apt-get
 RUN apt-get update
 
-RUN apt-get install -y --force-yes libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
+RUN apt-get install -y --force-yes libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++ socat
 
 # Install Chrome
 RUN apt-get install -y --force-yes libxss1 libappindicator1 libindicator7
@@ -21,3 +21,4 @@ RUN webdriver-manager update
 
 # Add config
 ADD ./docker /
+RUN chmod u+x /usr/local/bin/start-selenium.sh
