@@ -21,4 +21,5 @@ RUN webdriver-manager update
 
 # Add config
 ADD ./docker /
-RUN chmod u+x /usr/local/bin/start-selenium.sh
+RUN chmod ugo+x /etc/init.d/xvfb
+RUN chmod ugo+x /usr/local/bin/start-selenium.sh
